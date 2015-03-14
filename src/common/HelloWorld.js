@@ -1,6 +1,6 @@
 //var Utils = require("./Utils");
-//var _ = Utils.requireOrGlobal("underscore", "_");
-var _ = require("underscore");
+//var _ = Utils.requireOrGlobal("lodash", "_");
+var _ = require("lodash");
 
 exports.hello = function hello() {
     return "hello";
