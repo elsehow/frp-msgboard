@@ -93,5 +93,6 @@ _Also, please don't edit files in the "dist" subdirectory as they are generated 
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2013 Amitay Dobo  
-Licensed under the MIT license.
+MIT
+forked from [browserify-jasmine-node-example](https://github.com/amitayd/grunt-browserify-jasmine-node-example) (c) 2013 Amitay Dobo  
+all elsehow commits (c) elsehow 2015
