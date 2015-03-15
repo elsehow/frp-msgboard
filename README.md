@@ -1,4 +1,5 @@
-# elsehow's empty webapp[![Build Status](https://travis-ci.org/elsehow/empty-webapp.png)](https://travis-ci.org/elsehow/empty-webapp)
+# frp-msgboard
+attempting to build a full example app with frp
 
 Jasmine on the browser and jasmine-node for unit testing. 
 
