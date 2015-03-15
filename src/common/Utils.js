@@ -15,6 +15,13 @@ exports.requireOrGlobal = function (module, global) {
     }
 };
 
+exports.nonEmpty = function (x) { return x.length > 0 }
+
+exports.setVisibility = function (element, visible) { element.toggle(visible) }
+
+exports.setEnabled = function (element, enabled) { element.attr("disabled", !enabled) }
+
+exports.truthy = function (x) { if (x) return x }
 
 
 

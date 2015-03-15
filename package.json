@@ -29,6 +29,10 @@
     "test": "grunt"
   },
   "dependencies": {
+    "bacon.jquery": "^0.4.11",
+    "bacon.model": "^0.1.12",
+    "baconjs": "^0.7.53",
+    "get-urls": "^4.0.1",
     "lodash": "^3.5.0"
   },
   "devDependencies": {

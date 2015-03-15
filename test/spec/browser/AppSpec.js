@@ -2,12 +2,25 @@
 
 var App = require('../../../src/browser/App');
 var HelloWorld = require('../../../src/common/HelloWorld');
+var _ = require('lodash')
 
-describe("TODO: app should have its own spec", function() {
-    // it("running App.main() should create an element with 'hello' id, with text set to helloUnderscore()", function() {
-    //     App.main();
-    //     var expected = HelloWorld.helloUnderscore();
-    //     var actual = window.document.getElementById('hello').innerHTML;
-    //     expect(actual).toEqual(expected);
-    // });
+describe("App", function() {
+
+	// beforeEach(function() {
+ //        App.main();
+	// 	this.dataset = {
+	// 		{ text: 'ayyyy https://github.com/baconjs/bacon.js/wiki/Diagrams is tite'
+	// 			, url: 'https://github.com/baconjs/bacon.js/wiki/Diagrams'
+	// 		}
+	// 	}
+	// })
+
+ //    it("should pick the correct URL to embed", function() {
+ //    	_.forEach(this.dataset, function (d) {
+    		
+ //    	}
+ //        var expected = HelloWorld.helloUnderscore();
+ //        var actual = window.document.getElementById('hello').innerHTML;
+ //        expect(actual).toEqual(expected);
+ //    });
 });
