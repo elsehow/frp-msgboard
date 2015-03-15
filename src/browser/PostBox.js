@@ -6,7 +6,7 @@ var _ = require('lodash')
 , utils = require('../common/Utils')
 , postBoxTemplates = require('./templates/PostBoxTemplate')
 
-// SPECS:
+// SPECS
 // while typing, should embed URLs the user types in
 // but, only one URL at a time
 // an X button should remove the url
@@ -15,6 +15,11 @@ var _ = require('lodash')
 // TODO
 // get-urls module isnt very good (doesnt trim off either side of the url)
 // urls should return embed data (even if its fake) to practice ajax streams
+
+// GRIPES
+// there is still some model with mutating states
+// embeddedURLs could easily be a stream (of reqs made to the api)
+// currentEmbed could easily be a stream of responses from the api
 
 exports.setup = function() {
 
@@ -43,11 +48,25 @@ exports.setup = function() {
   // disable the post button unless postInputProperty is nonempty
   var postButtonDisabled = postInputProperty.map(utils.nonEmpty)
   postButtonDisabled.assign(utils.setEnabled, $('#postButton'))
-
+  
   // pressing the removeEmbed button removes postBoxModel.currentEmbed
   var clearEmbedStream = $("#removePostEmbed")
     .asEventStream('click')
     .onValue(postBoxModel.clearCurrentEmbed)
+
+  var urlsInPost = postInputProperty
+    .map(embedLinks.getUrls)
+    .filter(utils.nonEmpty)
+    .skipDuplicates(_.isEqual)
+
+  var urlsToEmbed = urlsInPost
+    .scan([], function (acc, urls) {
+      // should return the first url that ends with .com 
+      console.log('url i see ', urls)
+      return _.find(urls, function (url) {
+        
+      })
+    }).log()
 
   // the first URL that appears in the post
   // that we haven't already embedded 
@@ -74,6 +93,5 @@ exports.setup = function() {
         $("#postEmbed").html(
           postBoxTemplates.embedTemplate(url)
         )
-      }
     })
 }
