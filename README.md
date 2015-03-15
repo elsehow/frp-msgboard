@@ -1,9 +1,6 @@
 # frp-msgboard
 attempting to build a full example app with frp
 
-Jasmine on the browser and jasmine-node for unit testing. 
-
-See further discussion at doboism's [blog post](http://www.doboism.com/blog/2013/05/17/cross-developing-for-node-js-and-browsers-using-browserify/).
 
 ## Getting Started
 
